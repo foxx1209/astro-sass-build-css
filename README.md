@@ -2,8 +2,10 @@
 |:----|
 |ビルド時にHTMLファイル、CSSファイル、J Sファイル画像フォルダが自動作成|
 |CSS：CSSフォルダにリセットCSS ファイル専用のCSSファイルが作成|
+|SCSSフォルダ内で関数やMixin|base、reset記載(cocomate環境）|
 |px→myrem|
 |robots.tet サイトマップ　本番環境のURL入れる|
+
 
 
 
