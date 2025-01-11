@@ -5,8 +5,6 @@
 |SCSSフォルダ内で関数やMixin|base、reset記載(cocomate環境）|
 |px→myrem|
 |clamp　myCl(最小値|最大値|最小ビューポート|最大ビューポート)|
-|:----|:----|:----|:----|
-
 |robots.tet サイトマップ　本番環境のURL入れる|
 
 
