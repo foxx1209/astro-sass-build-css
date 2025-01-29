@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import { Image } from 'astro:assets';
+import myImage from "/src/image/or.png";
+
+
+---
+	<Layout>
+		<p class="aa">111</p>
+		<p class="test">111</p>
+		<Image src={myImage} alt="画像の説明。" />
+	</Layout>
+	
+</body>
+</html>
+
+<style lang="scss">
+
+
+.test{
+	font-size: myrem(30);
+		@include mq('md') {
+	color: red;
+	font-size: myrem(500);
+	}
+}
+
+.test{
+	font-size: myrem(100);
+		@include mq('md') {
+	color: red;
+	font-size: myrem(50);
+	}
+}
+
+</style>
+
+<script>
+	console.log('111')
+</script>

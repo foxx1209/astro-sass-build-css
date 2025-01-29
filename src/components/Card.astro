@@ -1,0 +1,27 @@
+---
+export interface props {
+	title: string;	
+}
+
+const {text,...props}= Astro.props;
+
+
+---
+
+
+<div class="p-card">
+  <p class={text} {...props}>
+    <slot/>
+  </p>
+</div>
+
+<style lang="scss" >
+.p-card {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: myrem(300);
+  width: 100%;
+}
+</style>

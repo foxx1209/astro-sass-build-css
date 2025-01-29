@@ -1,0 +1,21 @@
+---
+export interface props {
+	title: string;
+}
+const {title} = Astro.props;
+---
+<header>
+	<p>{title}</p>
+	<p>1111</p>
+</header>
+
+<style>
+	.p-header {
+	}
+	.p-header nav ul {
+		display: flex;
+	}
+	.p-header nav ul li {
+		margin-right: 1rem;
+	}
+</style>
