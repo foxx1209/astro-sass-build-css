@@ -30,9 +30,7 @@ export default defineConfig({
           entryFileNames: `assets/js/[name].js`,
           chunkFileNames: `assets/js/[name].js`,
           assetFileNames: (assetInfo) => {
-            // namesを使用（配列の最初の要素を取得）
             const fileName = assetInfo.names?.[0] ?? "";
-            // sourceを文字列として扱う
             const sourceStr = assetInfo.source?.toString() ?? "";
             const extType = fileName.split(".").at(-1)?.toLowerCase() ?? "";
 
