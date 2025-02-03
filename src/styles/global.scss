@@ -120,6 +120,18 @@ html {
     font-size: 100%;
   }
 }
+.l-inner {
+  width: 100%;
+  padding-right: myrem(strip-unit($padding-sp));
+  padding-left: myrem(strip-unit($padding-sp));
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(md) {
+    max-width: $innerWidth + $padding-pc * 2;
+    padding-right: myrem(strip-unit($padding-pc));
+    padding-left: myrem(strip-unit($padding-pc));
+  }
+}
 
 // フォント、カラー設定
 body {
