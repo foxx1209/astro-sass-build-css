@@ -139,3 +139,18 @@ button {
     }
   }
 }
+
+.u-desktop {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+.u-mobile {
+  display: block;
+
+  @include mq(md) {
+    display: none;
+  }
+}
