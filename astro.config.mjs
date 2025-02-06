@@ -1,16 +1,20 @@
 import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
+import sitemap from "@astrojs/sitemap"; // ここでsitemapをインポート
+import relativeLinks from "astro-relative-links";
 
-const path = "/dist";
 
 export default defineConfig({
   // site: "", // サイトのURLを設定する場合はここに入力
-  base: path,
+  base: "", // 相対パスに設定
+  trailingSlash: 'always',
   integrations: [sitemap()],
-  
+  integrations: [relativeLinks()],
+  compressHTML: false,
+
+
   vite: {
     define: {
-      "import.meta.env.BASE_PATH": JSON.stringify(path),
+      "import.meta.env.BASE_PATH": JSON.stringify(""),
     },
 
     css: {
@@ -21,7 +25,7 @@ export default defineConfig({
       },
     },
 
-   build: {
+    build: {
       minify: false,
       emptyOutDir: true,
       assetsInlineLimit: 0,
@@ -71,9 +75,8 @@ export default defineConfig({
       },
     },
   },
-  build:{
+  build: {
     assetsInlineLimit: 0,
     format: "file",
-    //  →ビルドしたhtmlファイルをdist直下に出力
-  }
+  },
 });
