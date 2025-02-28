@@ -22,7 +22,7 @@
   @return math.div($size, $window_width) * 100vw;
 }
 
-@function cl($min, $max, $min-view-port: 375, $max-view-port: 1440) {
+@function fz($min, $max, $min-view-port: 320, $max-view-port: 1200) {
   $valiable-part: calc(($max - $min) / ($max-view-port - $min-view-port));
   $constant: calc(($max - $max-view-port * $valiable-part) / 16);
   $min-rem: calc($min / 16 * 1rem);
